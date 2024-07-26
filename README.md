@@ -78,7 +78,6 @@ This project implements a backend API for user authentication using email and On
   "message": "Login successful.",
   "token": "jwt_token"
   }
-  And here's the setup and installation section:
 
 ## Setup and Installation
 
