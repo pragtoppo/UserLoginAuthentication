@@ -41,10 +41,66 @@ This project implements a backend API for user authentication using email and On
 
 ## API Endpoints
 ### 1. User Registration
-- **Endpoint**: `POST /api/register`
+- **Endpoint**: `POST /api/register/`
 - **Request Body**:
   ```json
   {
     "email": "user@example.com"
   }
+- **Response**:
+  ```json
+  {
+    "message": "Registration successful. Please verify your email."
+  }
+### 2. Request OTP
+- **Endpoint**: `POST /api/request-otp/`
+- **Request Body**:
+  ```json
+  {
+    "email": "user@example.com"
+  }
+- **Response**:
+  ```json
+  {
+    "message": "OTP sent to your email."
+  }
+### 3. Verify OTP
+- **Endpoint**: `POST /api/verify-otp/`
+- **Request Body**:
+  ```json
+  {
+  "email": "user@example.com",
+  "otp": "123456"
+  }
+- **Response**:
+  ```json
+  {
+  "message": "Login successful.",
+  "token": "jwt_token"
+  }
+  And here's the setup and installation section:
+
+## Setup and Installation
+
+1. Clone the Repository:
+   ```sh
+   git clone https://github.com/your-username/UserLoginAuthentication.git
+   cd UserLoginAuthentication
+2. Create and Activate a Virtual Environment:
+   ```sh
+   python -m venv env
+   source env/bin/activate  # On Windows use: .\env\Scripts\activate
+3. Install Dependencies:
+   ```sh
+   pip install -r requirements.txt
+
+4. Apply Migrations:
+   ```sh
+   python manage.py migrate
+
+5. Run the Development Server:
+   ```sh
+    python manage.py runserver
+   
+
 
