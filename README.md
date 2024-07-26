@@ -1,4 +1,4 @@
-User Login API with Email and OTP Authentication
+# User Login API with Email and OTP Authentication
 Project Description
 This project implements a backend API for user authentication using email and One-Time Password (OTP). Users can register with their email, receive an OTP, and verify it to gain access. The API ensures secure and efficient authentication processes.
 
